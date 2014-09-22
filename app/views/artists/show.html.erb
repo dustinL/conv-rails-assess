@@ -1,0 +1,21 @@
+<% content_for(:title, "#{@artist.name} | Concert Cal") %>
+
+<div class="jumbotron">
+  <h1><%= @artist.name %></h1>
+</div>
+
+<h3>Upcoming <%= @artist.name %> Shows:</h3>
+<ul>
+  <% @artist.shows.each do |show| %>
+    <li><%= show.date %> | <%= show.location %></li>
+  <% end %>
+</ul>
+
+
+<br>
+<p><a href="/artists/<%= @artist.id %>/shows/new">Add New Show</a></p>
+<p><a href="/artists/<%= @artist.id %>/edit">Edit Artist</a></p>
+<p><a href="/artists/<%= @artist.id %>"
+      data-confirm="Wait, really??"
+      data-method="delete"
+      rel="nofollow">Delete Artist</a></p>

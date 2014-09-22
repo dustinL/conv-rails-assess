@@ -1,0 +1,23 @@
+<% content_for(:title, "Add Show | Concert Cal") %>
+
+<% if @show.errors.any? %>
+  <h3>Please fix these errors:</h3>
+
+  <ul>
+    <% @show.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h3>Add a Show for <%= @artist.name %></h3>
+
+<form action='/artists/<%= @artist.id %>/shows' method='post'>
+
+  <br> <label for='show_date'>Date:</label>
+  <input id='show_date' name='show[date]' type="date"><br>
+  <br><label for='show_location'>Location:</label>
+  <input id='show_location' name='show[location]' type="text"><br>
+  <input name='show[artist_id]' type='hidden' value="<%= @artist.id %>">
+  <br><button>Submit</button>
+</form>

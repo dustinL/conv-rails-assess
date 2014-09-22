@@ -1,0 +1,14 @@
+<% content_for(:title, "Artists Home | Concert Cal") %>
+
+<div class="row">
+
+    <div class="jumbotron">
+      <h3>Your Artists:</h3>
+    </div>
+
+  <ul>
+    <% @artists.each do |artist| %>
+      <h4><a href= "/artists/<%= artist.id %>"><%= artist.name %></a></h4>
+      <% end %>
+  </ul>
+</div>
