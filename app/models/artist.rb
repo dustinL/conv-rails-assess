@@ -1,5 +1,5 @@
 class Artist < ActiveRecord::Base
   validates :name, :presence => :true
-  has_many :shows
+  has_many :shows, dependent: :destroy
 
 end
