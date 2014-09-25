@@ -17,4 +17,25 @@ class ShowsController < ApplicationController
     render 'new'
   end
 
+  def edit
+    @show = Show.find(params[:id])
+  end
+
+  def update
+    @show = Show.find(params[:id])
+    if @show.update(params[:show])
+      flash[:notice] = "Show name updated!"
+      redirect_to shows_path
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @show = Show.find(params[:id])
+    @show.destroy
+    flash[:notice] = "This show has been deleted."
+    redirect_to shows_path
+  end
+
 end
