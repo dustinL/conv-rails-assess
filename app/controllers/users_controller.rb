@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
 
-  def index
-    @users = User.all
-  end
-
   def new
     @user = User.new
   end
@@ -12,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "That's a new user you just created!"
-      redirect_to '/users'
+      redirect_to '/'
     else
       render 'new'
     end

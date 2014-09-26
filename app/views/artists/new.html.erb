@@ -1,19 +1,13 @@
 <% content_for(:title, "New Artist | Concert Cal") %>
 
-<% if @artist.errors.any? %>
-  <h3>Please fix these errors:</h3>
-
-  <ul>
-    <% @artist.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
-    <% end %>
-  </ul>
-<% end %>
+<%= render("layouts/errors", :object => @artist) %>
 
 <h3>New Artist Addition</h3>
 <br>
-<form action='/artists' method= 'post'>
-  <label for='artist_name'>Artist Name: </label>
-  <input id='artist_name' name='artist[name]' type="text">
-  <button>Submit</button>
-</form>
+<%= form_for(@artist) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>
