@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-# gem 'bcrypt'
+gem 'bcrypt'
 gem 'capybara'
 
 group :development do

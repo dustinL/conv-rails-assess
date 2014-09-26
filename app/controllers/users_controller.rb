@@ -15,6 +15,7 @@ class UsersController < ApplicationController
       redirect_to '/users'
     else
       render 'new'
+    end
   end
 
   def show
