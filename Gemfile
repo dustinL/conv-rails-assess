@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'pg'
+gem 'pry'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
@@ -10,7 +11,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 # gem 'bcrypt'
-# no longer called bcrypt-ruby
+gem 'capybara'
 
 group :development do
   gem 'better_errors'
@@ -20,6 +21,9 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'launchy'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :test do
