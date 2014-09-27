@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -19,7 +19,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <li class='login'>Logged in as <%= current_user.email %></li>
+          <li><%= link_to "Logged in as #{current_user.email}", user_path(current_user) %></li>
           <li><%= link_to "Log Out", session_path("current"), method: 'delete' %></li>
         <% else %>
           <li><%= link_to "Log In", new_session_path %></li>

@@ -13,9 +13,9 @@
 
 
 <br>
-<p><a href="/artists/<%= @artist.id %>/shows/new">Add New Show</a></p>
-<p><a href="/artists/<%= @artist.id %>/edit">Edit Artist</a></p>
-<p><a href="/artists/<%= @artist.id %>"
-      data-confirm="Wait, really??"
-      data-method="delete"
-      rel="nofollow">Delete Artist</a></p>
+<p><%= link_to "Add New Show", new_artist_show_path(@artist), :class => "btn btn-primary" %></p><br>
+<p><%= link_to "Edit", edit_artist_path(@artist), :class => "btn btn-primary" %></p>
+<p><%= link_to "Delete", artist_path(@artist),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"},
+                         :class => "btn btn-danger" %></p>
