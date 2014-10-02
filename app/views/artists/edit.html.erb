@@ -1,5 +1,6 @@
 <% content_for(:title, "Edit Artist | Concert Cal") %>
 
+<%= render('layouts/alerts') %>
 <%= render("layouts/errors", :object => @artist) %>
 
 <h3>Update <%= @artist.name %></h3>

@@ -1,13 +1,15 @@
 <% content_for(:title, "New Artist | Concert Cal") %>
 
-<%= render("layouts/errors", :object => @artist) %>
+<div class="container">
+  <%= render("layouts/errors", :object => @artist) %>
 
-<h3>New Artist Addition</h3>
-<br>
-<%= form_for(@artist) do |f| %>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <%= f.submit(:class => "btn btn-primary") %>
-<% end %>
+  <h3>New Artist Addition</h3>
+  <br>
+  <%= form_for(@artist) do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <%= f.submit(:class => "btn btn-primary") %>
+  <% end %>
+</div>

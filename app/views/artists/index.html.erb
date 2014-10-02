@@ -3,12 +3,17 @@
 <div class="row">
 
     <div class="jumbotron">
-      <h3>Currently Tracked Artists</h3>
+      <div class="container">
+        <h2>Currently Tracked Artists</h2>
+      </div>
     </div>
+  <%= render('layouts/alerts') %>
 
-  <ul>
-    <% @artists.each do |artist| %>
-      <h4><%= link_to "#{artist.name}", artist_path(artist.id) %></h4>
-      <% end %>
-  </ul>
+  <div class="container">
+    <ul>
+      <% @artists.each do |artist| %>
+        <h4><%= link_to "#{artist.name}", artist_path(artist.id) %></h4>
+        <% end %>
+    </ul>
+  </div>
 </div>

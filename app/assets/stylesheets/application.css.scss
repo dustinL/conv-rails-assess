@@ -16,8 +16,26 @@
 
 @import "bootstrap";
 @import "bootstrap-sprockets";
+@import url(http://fonts.googleapis.com/css?family=Raleway:500|Montserrat);
 
 .warnings {
   color: red;
 }
 
+h2, h3, h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron {
+  background: #34495e;
+  color: #ecf0f1;
+}
+
+li {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: url("pixel_weave.png");
+}

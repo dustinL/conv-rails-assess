@@ -1,21 +1,25 @@
 <% content_for(:title, "#{@artist.name} | Concert Cal") %>
 
 <div class="jumbotron">
-  <h1><%= @artist.name %></h1>
+  <div class="container">
+    <h2><%= @artist.name %></h2>
+  </div>
 </div>
 
-<h3>Upcoming <%= @artist.name %> Shows:</h3>
-<ul>
-  <% @artist.shows.each do |show| %>
-    <li><%= show.date %> | <%= show.location %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <h3>Upcoming <%= @artist.name %> Shows:</h3>
+  <ul>
+    <% @artist.shows.each do |show| %>
+      <li><%= show.date %> | <%= show.location %></li>
+    <% end %>
+  </ul>
 
 
-<br>
-<p><%= link_to "Add New Show", new_artist_show_path(@artist), :class => "btn btn-primary" %></p><br>
-<p><%= link_to "Edit", edit_artist_path(@artist), :class => "btn btn-primary" %></p>
-<p><%= link_to "Delete", artist_path(@artist),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"},
-                         :class => "btn btn-danger" %></p>
+  <br>
+  <p><%= link_to "Add New Show", new_artist_show_path(@artist), :class => "btn btn-primary" %></p><br>
+  <p><%= link_to "Edit", edit_artist_path(@artist), :class => "btn btn-warning" %></p>
+  <p><%= link_to "Delete", artist_path(@artist),
+                           :data => {:confirm => "You sure?",
+                                     :method => "delete"},
+                           :class => "btn btn-danger" %></p>
+</div>
