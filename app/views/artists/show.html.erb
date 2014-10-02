@@ -18,8 +18,8 @@
 
   <br>
   <p><%= link_to "Add New Show", new_artist_show_path(@artist), :class => "btn btn-primary" %></p><br>
-  <p><%= link_to "Edit", edit_artist_path(@artist), :class => "btn btn-warning" %></p>
-  <p><%= link_to "Delete", artist_path(@artist),
+  <p><%= link_to "Edit Artist", edit_artist_path(@artist), :class => "btn btn-warning" %></p>
+  <p><%= link_to "Delete Artist", artist_path(@artist),
                            :data => {:confirm => "You sure?",
                                      :method => "delete"},
                            :class => "btn btn-danger" %></p>
