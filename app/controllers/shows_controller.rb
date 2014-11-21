@@ -1,5 +1,7 @@
 class ShowsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def create
     @artist = Artist.find(params[:artist_id])
     @show = Show.new(params[:show])

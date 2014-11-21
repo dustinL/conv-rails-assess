@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'bcrypt'
 gem 'capybara'
+gem 'devise'
 
 group :development do
   gem 'better_errors'
