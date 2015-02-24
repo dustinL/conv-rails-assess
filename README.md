@@ -1,4 +1,4 @@
-#Concert Collector#
+#Convetional Rails - Epicodus Assessment#
 
 ####[Concert Collector] (http://concert-cal-v2.herokuapp.com) on Heroku
 
