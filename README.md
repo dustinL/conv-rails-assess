@@ -1,6 +1,6 @@
-#Convetional Rails - Epicodus Assessment#
+#Concert Collector#
 
-####[Concert Collector] (http://concert-cal-v2.herokuapp.com) on Heroku
+####[Concert Collector](http://concert-cal-v2.herokuapp.com) on Heroku
 
 ####Written by Dustin Lewis
 
@@ -20,4 +20,8 @@ A basic program allowing a user to add + track artists and their respective conc
 
 ####Known Bugs:
 Date format field was not converted by Heroku for creating a new show. Format must be entered as YYYY-MM-DD.
+
+###Planned Features/Changes:
+- update layout
+- sort shows by date and location
 
