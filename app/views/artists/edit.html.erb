@@ -1,14 +1,18 @@
-<% content_for(:title, "Edit Artist | Concert Cal") %>
+<% content_for(:title, "Edit Artist | Concert Collector") %>
 
-<%= render('layouts/alerts') %>
-<%= render("layouts/errors", :object => @artist) %>
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <%= render('layouts/alerts') %>
+    <%= render("layouts/errors", :object => @artist) %>
 
-<h3>Update <%= @artist.name %></h3>
-<br>
-<%= form_for(@artist) do |f| %>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <h3>Update <%= @artist.name %></h3>
+    <br>
+    <%= form_for(@artist) do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <%= f.submit(:class => "btn btn-primary") %>
+    <% end %>
   </div>
-  <%= f.submit(:class => "btn btn-primary") %>
-<% end %>
+</div>

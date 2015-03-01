@@ -1,6 +1,7 @@
-<% content_for(:title, "Login | Concert Cal") %>
+<% content_for(:title, "Login | Concert Collector") %>
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3">
+    <%= render("layouts/alerts") %>
     <h1 class="text-center">Log In</h1>
     <%= form_tag sessions_path do %>
       <div class="form-group">
