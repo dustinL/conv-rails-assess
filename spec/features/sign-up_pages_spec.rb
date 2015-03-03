@@ -1,6 +1,6 @@
 describe "the sign-up process" do
   it "successfully creates a new user account" do
-    visit 'users/new'
+    visit 'signup'
     fill_in 'Name', :with => 'Bobby'
     fill_in 'Email', :with => 'user1@example.com'
     fill_in 'Password', :with => 'password'

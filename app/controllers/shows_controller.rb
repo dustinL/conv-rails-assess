@@ -1,4 +1,5 @@
 class ShowsController < ApplicationController
+  before_action :authorize
 
   def create
     @artist = Artist.find(params[:artist_id])
