@@ -7,9 +7,9 @@
         <h2>Currently Tracked Artists</h2>
       </div>
     </div>
-  <%= render('layouts/alerts') %>
 
   <div class="container">
+  <%= render('layouts/alerts') %>
     <ul>
       <% @artists.each do |artist| %>
         <h4><%= link_to "#{artist.name}", artist_path(artist.id) %></h4>
