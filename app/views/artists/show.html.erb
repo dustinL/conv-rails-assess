@@ -6,9 +6,9 @@
   </div>
 </div>
 
-<%= render('layouts/alerts') %>
 <div class="container">
-  <h3>Upcoming <%= @artist.name %> Shows:</h3>
+<%= render('layouts/alerts') %>
+  <h3>Current collection of shows for <em><%= @artist.name %></em> :</h3>
   <ul>
     <% @artist.shows.each do |show| %>
       <li><%= show.date %> | <%= show.location %></li>

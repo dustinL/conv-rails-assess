@@ -9,7 +9,7 @@
     <br>
     <%= form_for(@artist) do |f| %>
       <div class="form-group">
-        <%= f.label :name %>
+        <%= f.label "Name: " %>
         <%= f.text_field :name %>
       </div>
       <%= f.submit(:class => "btn btn-primary") %>

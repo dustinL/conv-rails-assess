@@ -1,10 +1,11 @@
 <% content_for(:title, "#{@user.name} | Concert Collector") %>
 
 <div class="container">
-    <h1>Welcome, <%= @user.name %>!</h1><br>
+  <%= render('layouts/alerts') %>
+  <h1>Welcome, <%= @user.name %>!</h1><br>
 
-    <p><%= link_to "Edit User", edit_user_path, class: 'btn btn-primary' %></p>
-    <p><%= link_to "Delete User", user_path, data: {confirm: "You're about to delete a user. Are you sure?",
-                                                    method: "delete"},
-                                                    class: "btn btn-danger" %></p>
+  <p><%= link_to "Edit User", edit_user_path, class: 'btn btn-primary' %></p>
+  <p><%= link_to "Delete User", user_path, data: {confirm: "You're about to delete a user. Are you sure?",
+                                                  method: "delete"},
+                                                  class: "btn btn-danger" %></p>
 </div>
