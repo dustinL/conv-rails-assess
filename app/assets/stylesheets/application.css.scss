@@ -18,12 +18,18 @@
 @import "bootstrap-sprockets";
 @import url(http://fonts.googleapis.com/css?family=Raleway:500|Montserrat);
 
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
 .warnings {
   color: red;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -33,9 +39,17 @@ h1, h2, h3, h4 {
 }
 
 li {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 body {
   background-image: url("pixel_weave.png");
+}
+
+body.homepage {
+  background: url("glo-flickr.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -1,6 +1,6 @@
 #Concert Collector#
 
-####[Concert Collector](http://concert-cal-v2.herokuapp.com) on Heroku
+####[Concert Collector](http://concert-collector.herokuapp.com) on Heroku
 
 ####Written by Dustin Lewis
 

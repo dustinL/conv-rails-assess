@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  root :to => "artists#index"
+  root :to => "homepages#index"
   resources :sessions, only: [:create, :destroy, :new]
   resources :users, except: [:index]
   resources :artists do
