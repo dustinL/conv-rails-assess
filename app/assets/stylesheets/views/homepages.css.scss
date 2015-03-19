@@ -3,18 +3,42 @@
   padding-bottom: 50px;
   text-align: center;
   color: white;
-}
 
-.intro-message {
-    position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
-}
-
-
-.intro-message > h1 {
+  h3 {
     margin: 0;
     font-weight: 300;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 3em;
+  }
+
+  .intro-message {
+      position: relative;
+      padding-top: 10%;
+      padding-bottom: 10%;
+
+    h1 {
+      margin: 0;
+      font-weight: 300;
+      text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+      font-size: 3em;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  }
+
+  a, a:visited, a:hover, a:active {
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+
+  a {
+    color: #F0F0EB;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  opacity: 0.4;
 }
