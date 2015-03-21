@@ -1,19 +1,23 @@
 <% content_for(:title, "Add Show | Concert Collector") %>
 
 <div class="container">
-  <%= render("layouts/errors", :object => @show) %>
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <%= render("layouts/errors", :object => @show) %>
 
-  <h3>Add a Show for <%= @artist.name %></h3><br>
+      <h3>Add a Show for <em><%= @artist.name %></em></h3><br>
 
-  <%= form_for [@artist, @show] do |f| %>
-    <div class="form-group">
-      <%= f.label "Date: " %>
-      <%= f.date_field :date %>
+      <%= form_for [@artist, @show] do |f| %>
+        <div class="form-group">
+          <%= f.label "Date: " %>
+          <%= f.date_field :date %>
+        </div>
+        <div class="form-group">
+          <%= f.label "Location: " %>
+          <%= f.text_field :location, placeholder: "City, State" %>
+        </div>
+        <%= f.submit(:class => "btn btn-primary") %>
+      <% end %>
     </div>
-    <div class="form-group">
-      <%= f.label "Location: " %>
-      <%= f.text_field :location, placeholder: "City, State" %>
-    </div>
-    <%= f.submit(:class => "btn btn-primary") %>
-  <% end %>
+  </div>
 </div>
