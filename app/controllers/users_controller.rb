@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "That's a new user you just created!"
-      redirect_to '/'
+      redirect_to user_path(@user)
     else
       render 'new'
     end
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     flash[:notice] = "That user is now dead."
-    redirect_to '/users'
+    redirect_to artists_path
   end
 
 private
