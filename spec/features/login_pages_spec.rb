@@ -1,4 +1,4 @@
-describe "the sign-in process" do
+describe "the login process" do
   it "signs a user in who uses the correct password" do
     visit 'login'
     user = User.create(:name => 'Bobby', :email => 'user@example.com', :password => 'password')
@@ -14,6 +14,6 @@ describe "the sign-in process" do
     fill_in 'Email', :with => 'user@example.com'
     fill_in 'Password', :with => 'wrong'
     click_button 'Log In'
-    page.should have_content "Email or password is invalid"
+    expect(page).to have_content "Email or password is invalid"
   end
 end
